@@ -1,0 +1,54 @@
+<div class="row col-lg-12">
+    <h1>Registration Form</h1>
+</div>
+<div class="clearfix"></div>
+<div class="row col-lg-12">
+    <form [formGroup]="registration" (ngSubmit)="submitRegistrationDetails($event)">
+        <div class="col-lg-6 col-md-12">
+            <label class="col-md-4" for="user_id">User ID:</label>
+            <div class="col-md-8">
+                <input formControlName="user_id" type="text" id="user_id" name="user_id" />
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <label class="col-md-4" for="password">Password:</label>
+            <div class="col-md-8">
+                <input type="text" id="password" name="password" formControlName="password" />
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <label class="col-md-4" for="name">Name:</label>
+            <div class="col-md-8">
+                <input type="text" id="name" name="name" formControlName="name" />
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+            <label class="col-md-4" for="address">Address:</label>
+            <div class="col-md-8">
+                <!-- <select id="address" name="address" formControlName="address" (change)="generateArrayctrl($event.target.value)">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>  
+                </select> -->
+                <input type="text" name="address" id="address" formControlName="address" (blur)="generateArrayctrl($event.target.value)" />
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div *ngFor="
+        let round of registration.get('address')['controls'];let i = index;
+        let first = first;
+        let last = last">
+            <div *ngIf="i > 0" class="col-lg-12" [formGroupName]="i">
+                <div class="col-md-6">
+                    <label for="currentAddress">Current Address</label>
+                    <input type="text" [id]="currentAddress + i" name="currentAddress + i" formControlName="currentAddress" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="col-lg-6">
+                <input type="submit" name="sub" id="sub" value="Submit Form" />
+            </div>
+        </div>
+    </form>
+</div>

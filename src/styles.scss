@@ -1,0 +1,98 @@
+html, body { height: 100%; }
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #ccc !important;
+}
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 12;
+    transition-property: position;
+    transition-duration: 4s;
+    transition-delay: 2s;
+}
+.mar0{
+    margin: 0 !important
+}
+.martp10{ margin-top: 10px;}
+.pading0{ padding: 0 !important}
+.padlt0{padding-left: 0 !important;}
+.padrt0{padding-right: 0 !important}
+.mainAppContainer {
+    margin-bottom: 150px !important;
+}
+.mat-form-field {
+    width: 100%;
+    background: #fff;
+}
+.modal-footer{
+    border-top: none !important;
+    justify-content: center !important;
+    button{
+        bottom: 100%;
+        background-color: #229c53;
+        outline: 0;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0.5rem 2.2rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        font-weight: 700;
+        border: none;
+        color: #fff;
+    }
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-outline-dark:hover, .btn-outline-dark:not(:disabled):not(.disabled):active{
+        background-color: #229c53;
+        border-color: #229c53;
+    }
+    .btn-outline-dark:not(:disabled):not(.disabled):active:focus, .btn-outline-dark:focus{box-shadow: none;}
+}
+.copyrights{
+    background-color: #1c57b9;
+    padding: 10px 0;
+    p{
+        align-content: center;
+        margin: 0 auto;
+        color: #ffffff;
+        font-size: 14px;
+    }
+}
+app-register, app-thank-you {
+    width: 100%;
+}
+#footer-outer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+}
+.restrarantTable{
+    table{width: 100%;}
+    .example-card {
+        max-width: 400px;
+      }
+      img {
+        background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+        background-size: cover;
+        width: 100%;
+      }
+}
+.imageOuter {
+    width: 175px !important;
+}
+.loginOuter{
+    width: 100%;
+}
+@media (max-width: 540px){
+    .mainAppContainer{
+        margin-bottom: 200px !important;
+    }
+}
+

@@ -1,0 +1,20 @@
+<div class="row col-lg-12">
+    pagedList{{pagedList}}
+
+    <div *ngfor="let item of pagedList">
+        <label class="col-sm-4">
+            Email Address:
+        </label>
+        <div class="col-sm-8">{{item.email}}</div>
+        <label class="col-sm-4">
+            First Name:
+        </label>
+        <div class="col-sm-8">{{item.first_name}}</div>
+        <label class="col-sm-4">
+            Last Name:
+        </label>
+        <div class="col-sm-8">{{item.last_name}}</div>
+    </div>
+</div>
+We are on favourite page
+

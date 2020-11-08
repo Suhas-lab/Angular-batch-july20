@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" [class.fixed]="navFixed">
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav ml-auto row col-lg-12">
+        <li class="nav-item dropdown ml-auto col-md-6"></li>
+    <li class="nav-item dropdown ml-auto col-md-3">
+        <a class="nav-link dropdown-toggle" href="#" [routerLink]="['restaurants']" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Restaurants</a>
+    </li>
+    <li class="nav-item dropdown ml-auto col-md-3">
+        <a class="nav-link dropdown-toggle" href="#" [routerLink]="['favourite-page']" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Favourite page</a>
+    </li>
+    show login status here => {{loginstatus}}
+    <li *ngIf="loginstatus === false" class="nav-item dropdown ml-auto col-md-3">
+        <a class="nav-link dropdown-toggle" href="#" [routerLink]="['login']" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Login</a>
+    </li>
+    <li *ngIf="loginstatus" class="nav-item dropdown ml-auto col-md-3">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" (click)="logOutUser()">Log Out</a>
+    </li>
+    </ul>
+    </div>
+    </nav>
