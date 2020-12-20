@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { RestaurantsService } from 'src/app/service/restaurants.service';
 import { from, Subject, ConnectableObservable, interval, AsyncSubject } from 'rxjs';
 import { multicast } from 'rxjs/operators'
@@ -63,25 +63,25 @@ export class FaouritePageComponent implements OnInit {
 
     // subscriptionConnect = (multicasted as ConnectableObservable<number>).connect();
 
-  //   const subject = new AsyncSubject(); // 0 is the initial value
+    const subject = new AsyncSubject(); // 0 is the initial value
 
-  //   subject.subscribe({
-  //     next: (v) => console.log(`first subscribe => : ${v}`)
-  //   });
+    subject.subscribe({
+      next: (v) => console.log(`first subscribe => : ${v}`)
+    });
 
-  //   subject.next(1);
-  //   subject.next(2);
-  //   subject.next(3);
-  //   subject.next(4);
-  //   subject.next(5);
-  //   subject.next(6);
+    subject.next(1);
+    subject.next(2);
+    subject.next(3);
+    subject.next(4);
+    subject.next(5);
+    subject.next(6);
 
-  //   subject.subscribe({
-  //     next: (v) => console.log(`second subscriber => : ${v}`)
-  //   });
+    subject.subscribe({
+      next: (v) => console.log(`second subscriber => : ${v}`)
+    });
     
-  //   subject.next(7);
-  //   subject.complete();
-   }
+    subject.next(7);
+    subject.complete();
+  }
 
 }

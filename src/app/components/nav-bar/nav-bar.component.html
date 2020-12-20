@@ -13,14 +13,14 @@
         <a class="nav-link dropdown-toggle" href="#" [routerLink]="['favourite-page']" id="navbarDropdownMenuLink1" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Favourite page</a>
     </li>
-    show login status here => {{loginstatus}}
-    <li *ngIf="loginstatus === false" class="nav-item dropdown ml-auto col-md-3">
+    showhideLoginlogout{{showhideLoginlogout}}
+    <li *ngIf="!showhideLoginlogout" class="nav-item dropdown ml-auto col-md-3">
         <a class="nav-link dropdown-toggle" href="#" [routerLink]="['login']" id="navbarDropdownMenuLink1" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Login</a>
     </li>
-    <li *ngIf="loginstatus" class="nav-item dropdown ml-auto col-md-3">
+    <li *ngIf="showhideLoginlogout" class="nav-item dropdown ml-auto col-md-3">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false" (click)="logOutUser()">Log Out</a>
+            aria-haspopup="true" aria-expanded="false" (click)="logOut($event)">Log Out</a>
     </li>
     </ul>
     </div>

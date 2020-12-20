@@ -5,7 +5,6 @@ import { RestaurantsPageComponent } from './components/restaurants-page/restaura
 import { FaouritePageComponent } from './components/faourite-page/faourite-page.component'
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { AuthGuardService } from './service/auth-guard.service'
-import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -29,12 +28,8 @@ const routes: Routes = [
     path:'login',
     component: LoginUserComponent,
     pathMatch:'full' 
-  },
-  {
-    path:'registration',
-    component: RegistrationComponent,
-    pathMatch: 'full'
   }
+  
 ];
 
 @NgModule({
