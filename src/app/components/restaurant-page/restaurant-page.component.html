@@ -1,0 +1,52 @@
+
+<div class="page-area">
+  <h2 class="text-center mt-3">RESTAURANTS</h2>
+  <hr class="mb-3">
+
+  <div class="row">
+      <div class="col-md-12 ml-3">
+          <div class="card m-3">
+              <img class="card-img-top" src="../../../assets/fea_restaurants-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Dinner in the Sky</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+                <a class="btn btn-primary">Know More</a>
+              </div>
+          </div>
+          <div class="card m-3">
+              <img class="card-img-top" src="../../../assets/fea_restaurants-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Rich Table</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+                <a  class="btn btn-primary">Know More</a>
+              </div>
+          </div>
+          <div class="card m-3">
+              <img class="card-img-top" src="../../../assets/fea_restaurants-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Mama's Fish House</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+                <a  class="btn btn-primary">Know More</a>
+              </div>
+          </div>
+          <div class="card m-3">
+              <img class="card-img-top" src="../../../assets/fea_restaurants-1.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">The Disaster Café</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+                <a  class="btn btn-primary">Know More</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="row col-lg-12 restrarantMain mt-5">
+  <div class="col-lg-4 restrarantTable">
+    <h1 class="p-3">Your Favorate Restaurants are here:</h1>
+    <input type="submit" id="submitbtn" name="submitbtn" value="Submit" (click)="submitUsers($event)" class="btn btn-primary p-3 m-3" />
+  </div>
+  <div class="col-lg-8">
+    <app-favorate-page [pagedList]="pagedList" [dataObj]="dataObj" (clearData)="clearAllArray()"></app-favorate-page>
+  </div>
+</div>

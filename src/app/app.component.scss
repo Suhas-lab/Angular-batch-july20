@@ -1,0 +1,16 @@
+router-outlet{
+    width: 100%;
+}
+
+app-login{
+    width: 100%;
+}
+
+.statusLogin{
+    border: 5px solid green;
+    border-radius: 2px;
+}
+
+.statusLogout{
+    border: 1px solid red;
+}

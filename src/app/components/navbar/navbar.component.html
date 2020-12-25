@@ -1,0 +1,73 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-info"
+  [class.fixed]="navFixed"
+>
+  <a class="navbar-brand text-secondary font-weight-bold" href="#"
+    >Status: <span class="text-dark">{{ showhideLoginLogout }}</span></a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="toggleNavbar()"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class="collapse navbar-collapse"
+    id="navbarNav"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav row col-lg-12 text-center">
+      <li class="nav-item col-lg-3"></li>
+      <li class="nav-item active col-lg-2">
+        <a 
+          class="nav-link text-uppercase text-white"
+          href="#"
+          routerLink="/restaurants"
+          routerLinkActive="active"
+        >Restaurants
+        </a>
+      </li>
+      <li class="nav-item col-lg-2">
+        <a 
+          class="nav-link text-uppercase text-white" 
+          href="#" 
+          routerLink="/favorate-page"
+          routerLinkActive="active"
+        >Favorate Page
+        </a>
+      </li>
+      <li class="nav-item col-lg-3"></li>
+      <li 
+        class="nav-item col-lg-2" 
+        [ngStyle]="{ 'padding-right': '1rem' }" 
+        *ngIf="!showhideLoginLogout"
+      >
+        <a 
+          class="nav-link text-uppercase text-white text-right"
+          href="#" 
+          routerLink="/login"
+          routerLinkActive="active"
+        >Login
+        </a>
+      </li>
+      <li 
+        class="nav-item col-lg-2" 
+        [ngStyle]="{ 'padding-right': '1rem' }" 
+        *ngIf="showhideLoginLogout"
+      >
+        <a 
+          class="nav-link text-uppercase text-white text-right"
+          href="#" 
+          (click)="logOut($event)"
+        >Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
