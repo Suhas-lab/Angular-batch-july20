@@ -18,7 +18,7 @@ export class AuthserviceService {
   private localLoginStatus = new Subject<boolean>();
   public loginRedirectUrl: string;
 
-  constructor(private localStorage: LocalStorageService) { }
+  constructor() { }
 
   public setStatusLogin(name: any) {
     this.localLoginStatus.next(name);
@@ -31,10 +31,6 @@ export class AuthserviceService {
     } else {
         return false;
     }
-  }
-
-  logout(): void {
-    this.localStorage.deleteData(DBkeys.ACCESS_TOKEN);
   }
 
 }

@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RestaurantsPageComponent } from './components/restaurants-page/restaurants-page.component';
 import { FaouritePageComponent } from './components/faourite-page/faourite-page.component'
 import { LoginUserComponent } from './components/login-user/login-user.component';
+import{SuccesfullComponent} from './components/succesfull/succesfull.component';
 import { AuthGuardService } from './service/auth-guard.service'
-import { RegistrationComponent } from './components/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -16,14 +16,15 @@ const routes: Routes = [
   {
     path: 'restaurants',
     component: RestaurantsPageComponent,
-    canActivate: [AuthGuardService],
+    
     pathMatch: 'full'
   },
   {
     path: 'favourite-page',
     component: FaouritePageComponent,
+    canActivate: [AuthGuardService],
     pathMatch: 'full',
-    canActivate: [AuthGuardService]
+    
   },
   {
     path:'login',
@@ -31,10 +32,12 @@ const routes: Routes = [
     pathMatch:'full' 
   },
   {
-    path:'registration',
-    component: RegistrationComponent,
-    pathMatch: 'full'
-  }
+    path:'succesfull',
+    component:SuccesfullComponent,
+    canActivate: [AuthGuardService],
+    pathMatch:'full'
+  },
+  
 ];
 
 @NgModule({

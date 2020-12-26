@@ -1,48 +1,36 @@
-<div class="headerDiv">
-    <h1>Login Here</h1>
+
+<body style="background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-01.jpg);">
+    <div style="text-align: center ">
+        <div >
+            <div class="headerDiv">
+                <h1 style="font: 400 47px/32px Roboto, Helvetica Neue, sans-serif;
+            
+                margin: 0px 0 29px;
+                padding-top: 80px; color: #dee7f0;">Login Form</h1>
+             </div>
+        
+             <form  #loginForm="ngForm" (ngSubmit)="login()" form-bg-light style="display:inline-block;padding: 100px; background-color:#e3e6e4; align-content: center !important;">
+    
+                <div style="    display: flex;">
+                    <label for="email" style="margin-right: 12px;
+                    margin-top: 9px;
+                    font-size: large;"> Email:</label>
+                     <input type="text" id="email" style="width: 80%;" class="form-control mb-4" name="email" [(ngModel)]="userlogin.email" #email="ngModel" />
+                </div>
+                <div  style="    display: flex;">
+                     <label for="password" style="margin-right: 12px;
+                     margin-top: 9px;
+                     font-size: large;">Password: </label>
+                     <input type="password" id="password" style="width: 80%;" class="form-control mb-4" name="password" [(ngModel)]="userlogin.password" #password="ngModel" /><br><br>
+                </div>
+                <div>
+                     <input type="submit" id="sub1"  name = "sub1" value="LogIn" (click)="login()"style="background-color: slategray;  display: inline-flex" />
+                </div>
+
+
+            </form>
+
+            
+        </div>
 </div>
-
-showloginform => {{showloginform}}
-
-<div class="row col-lg-12 col-md-12 col-sm-12 loginOuter">
-<!-- <form #loginForm="ngForm" (ngSubmit)="loginForm.valid ? login() : ''">
-        <label for="email" class="col-lg-4">
-            Email Address:
-        </label>
-        <div class="col-lg-8">
-            <input type="text" id="email" name="email" [(ngModel)]="userlogin.email" #email="ngModel" />
-        </div>
-        <label for="password" class="col-lg-4">
-            Password:
-        </label>
-        <div class="col-lg-8">
-            <input type="password" id="password" name="password" [(ngModel)]="userlogin.password" #password="ngModel" />
-        </div>
-        <div class="col-lg-12">
-            <input type="submit" id="sub1" name="sub1" value="Log In" />
-        </div>
-    </form> -->
-</div>
-<div class="clearfix"></div>
-<select (change)="generateCtrl($event.target.value)">
-    <option value="">Select</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-</select>
-
-<input *ngIf="showinput" type="text" value="show template driven" />
-<input *ngIf="showinput" type="text" value="show template driven" />
-<input *ngIf="showinput" type="text" value="show template driven" />
-<input *ngIf="showinput" type="text" value="show template driven" />
-
-<div class="clearfix"></div>
-<form [formGroup]="loginformreactive" (ngSubmit)="login()">
-
-    <input type="text" id="email" name="email" formControlName="email"/>
-    <!-- <div *ngIf="email.errors.required">
-        <span style="color: red">Please enter your email address</span>
-    </div> -->
-
-    <input type="password" id="password" name="password" formControlName="password" />
-    <input type="submit" id="sub1" name="sub1" value="Log In" />
-</form>
+</body>

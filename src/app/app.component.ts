@@ -1,7 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { Component, OnInit } from '@angular/core';
 import { AuthserviceService } from './service/authservice.service';
-import { LocalStorageService } from './service/local-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -13,29 +11,14 @@ export class AppComponent implements OnInit{
 
   loginstatus: boolean;
 
-  @ViewChild(NavBarComponent) child;
-  
-  isUserLoggedIn: boolean;
+  constructor(private authservice: AuthserviceService){
 
-  constructor(private authService: AuthserviceService, storageManager: LocalStorageService, ){
-    const status = this.authService.isLoggedIn;
-    this.loginstatus = status;
-
-    storageManager.initialiseStorageSyncListener();
   }
 
   ngOnInit(){
-    
+    const status = this.authservice.isLoggedIn;
+    this.loginstatus = status;
+    console.log("login status", status);
   }  
-
-  logOutUser(e):void{
-    console.log("log out user");
-    if (localStorage.length > 0) {
-      localStorage.clear();
-    }
-    this.authService.logout();
-    this.isUserLoggedIn = this.authService.isLoggedIn;
-
-  }
 
 }

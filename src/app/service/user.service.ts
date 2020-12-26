@@ -23,6 +23,7 @@ export class UserService {
   }
 
   logOut(){
+    
       
   }
   get currentUser(): User {

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, HostListener, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import svgIcon from '@material-ui/core/Icon';
 import { AuthserviceService } from 'src/app/service/authservice.service';
@@ -19,10 +19,6 @@ export class NavBarComponent implements OnInit, AfterViewInit {
 
   navFixed: boolean = false;
   private scrollOffset: number = 70;
-
-  @Input() loginstatus;
-  @Output() logOutevent = new EventEmitter();
-
   
   @HostListener('window:scroll')
   onWindowScroll() {
@@ -38,12 +34,11 @@ export class NavBarComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){}
   ngOnInit(): void {
+
     const localval = localStorage.getItem("access_token");
     if(localval !== null && localval !== undefined){
       this.showhideLoginlogout = true;
     }
-
-    console.log("loginstatus",this.loginstatus)
 
   }
 
@@ -53,12 +48,10 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     this.clicked = true;
   }
 
-
-  logOutUser(e){
-    // this.authService.setStatusLogin(false);
-    // localStorage.clear();
-    // this.router.navigate(['/']);
-    this.logOutevent.emit();
+  logOut(e){
+    this.authService.setStatusLogin(false);
+    localStorage.clear();
+    this.router.navigate(['/']);
   }
 
   @HostListener('document:click', ['event'])

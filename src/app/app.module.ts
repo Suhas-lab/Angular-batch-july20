@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterCommonComponent } from './components/footer-common/footer-common.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -16,7 +16,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { FaouritePageComponent } from './components/faourite-page/faourite-page.component';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { CommonModule } from '@angular/common';
-import { RegistrationComponent } from './components/registration/registration.component';
+import { SuccesfullComponent } from './components/succesfull/succesfull.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     RestaurantsPageComponent,
     FaouritePageComponent,
     LoginUserComponent,
-    RegistrationComponent,
+    SuccesfullComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,8 +38,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     MatTableModule,
     HttpClientModule,
     MatPaginatorModule,
-    CommonModule,
-    ReactiveFormsModule
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
