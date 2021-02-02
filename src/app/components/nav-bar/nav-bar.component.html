@@ -4,7 +4,10 @@
     </button>
     <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav ml-auto row col-lg-12">
-        <li class="nav-item dropdown ml-auto col-md-6"></li>
+        <li class="nav-item dropdown ml-auto col-md-3">
+            <a class="nav-link dropdown-toggle" href="#" [routerLink]="['todolist']" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">To Do List Example</a>
+        </li>
     <li class="nav-item dropdown ml-auto col-md-3">
         <a class="nav-link dropdown-toggle" href="#" [routerLink]="['restaurants']" id="navbarDropdownMenuLink" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Restaurants</a>
