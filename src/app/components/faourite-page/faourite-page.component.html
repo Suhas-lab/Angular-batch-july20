@@ -16,5 +16,20 @@
         <div class="col-sm-8">{{item.last_name}}</div>
     </div>
 </div>
+<input type="button" (click)="clickchild()" value="Fire Click Event" />
 We are on favourite page
+<div class="clearfix"></div>
+<div class="container">
+<div class="row col-lg-12">
+    <div *ngFor="let camera of cameraoutput" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <label class="col-lg-4">{{camera.camername}}</label>
+        <div class="col-lg-6"><img src="{{camera.cameraImage}}" alt="No Image Available" /></div>
+        <div class="col-lg-2">
+            <i *ngIf="camera.status === 'pass'" class="fa fa-check-square" aria-hidden="true"></i>
+            <i *ngIf="camera.status === 'fail'" class="fa fa-check-circle-o" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+</div>
+
 

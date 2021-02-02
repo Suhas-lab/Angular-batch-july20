@@ -19,7 +19,8 @@ export class RestaurantsPageComponent implements OnInit {
 
 @ViewChild(FaouritePageComponent) child;
 
-
+imageUrl = 'assets/testimage.png';
+Testimage = "Dynamic image"
   cols: any;
   datalist: any[];
   pagedList : any[];
@@ -104,6 +105,7 @@ export class RestaurantsPageComponent implements OnInit {
   }
 
   clearAllArray(){
+    console.log("This event is fired from child component")
     this.pagedList = [];
     this.dataObj = [];
     //console.log("")

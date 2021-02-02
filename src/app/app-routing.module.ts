@@ -6,7 +6,7 @@ import { FaouritePageComponent } from './components/faourite-page/faourite-page.
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { AuthGuardService } from './service/auth-guard.service'
 import { RegistrationComponent } from './components/registration/registration.component';
-
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 const routes: Routes = [
   {
     path: '',
@@ -16,14 +16,12 @@ const routes: Routes = [
   {
     path: 'restaurants',
     component: RestaurantsPageComponent,
-    canActivate: [AuthGuardService],
     pathMatch: 'full'
   },
   {
     path: 'favourite-page',
     component: FaouritePageComponent,
     pathMatch: 'full',
-    canActivate: [AuthGuardService]
   },
   {
     path:'login',
@@ -34,7 +32,13 @@ const routes: Routes = [
     path:'registration',
     component: RegistrationComponent,
     pathMatch: 'full'
+  },
+  {
+    path:'todolist',
+    component: TodoListComponent,
+    pathMatch: 'full'
   }
+
 ];
 
 @NgModule({

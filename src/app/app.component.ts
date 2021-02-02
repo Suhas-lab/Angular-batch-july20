@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { AuthserviceService } from './service/authservice.service';
 import { LocalStorageService } from './service/local-storage.service';
@@ -6,7 +6,7 @@ import { LocalStorageService } from './service/local-storage.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit{
   title = 'front-end-test';

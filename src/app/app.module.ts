@@ -17,6 +17,7 @@ import { FaouritePageComponent } from './components/faourite-page/faourite-page.
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { CommonModule } from '@angular/common';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RegistrationComponent } from './components/registration/registration.co
     FaouritePageComponent,
     LoginUserComponent,
     RegistrationComponent,
+    TodoListComponent,
   ],
   imports: [
     BrowserModule,

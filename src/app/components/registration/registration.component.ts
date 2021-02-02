@@ -10,7 +10,11 @@ export class RegistrationComponent implements OnInit {
 
   registration: FormGroup;
 
+  newvar: any;
 
+  suhasvar: any;
+
+  
   dataresponse: any = {
     user_id:"Ato222",
     password:"11w1w1w",

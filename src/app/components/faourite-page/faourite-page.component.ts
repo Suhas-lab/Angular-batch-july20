@@ -18,10 +18,18 @@ export class FaouritePageComponent implements OnInit {
   ]
 
  @Input() pagedList;
+ @Output() clearData = new EventEmitter<string>();
 
   constructor(private rest: RestaurantsService) { }
 
+  cameraoutput: any = {}
+
   ngOnInit(): void {
+
+    this.cameraoutput = [
+      {id: 1, camername:'Camera 1', cameraImage: '/assets/customer-image.jpg', status: 'pass'},
+      {id: 2, camername:'Camera 2', cameraImage: '/assets/customer-image.jpg', status: 'fail'}
+  ]
     // this.rest.postUserData(this.faouritePagedata).subscribe(success =>{
     //   console.log("User login successfully", success);
     //   //this.pagedList = success['data'];
@@ -82,6 +90,10 @@ export class FaouritePageComponent implements OnInit {
     
   //   subject.next(7);
   //   subject.complete();
+   }
+
+   clickchild(){
+     this.clearData.emit()
    }
 
 }
